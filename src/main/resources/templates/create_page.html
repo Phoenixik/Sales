@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create page</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/api/home/send}" th:object="${product}" method="post" enctype="application/x-www-form-urlencoded" >
+
+    <p>name: <input type="text" th:field="*{name}"> </input> </p><br><br>
+    <p>Description: <textarea type="text" maxlength="50" th:field="*{description}"> </textarea> </p><br><br>
+    <p>price: <input type="number" th:field="*{price}"> </input> </p><br><br>
+    <p> <input type="submit" value="submit"> </input> </p>
+
+</form>
+
+</body>
+</html>

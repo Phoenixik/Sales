@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+place order
+
+<form action="#" th:action="@{/api/home/orders}" th:object="${customer}"  method="post" enctype="application/x-www-form-urlencoded" >
+
+    <p>name: <input type="text" th:field="*{cuname}"> </input> </p><br><br>
+    <p>number: <input type="number" th:field="*{pnumber}"> </input> </p><br><br>
+    <p>product id: <input type="number" th:field="*{prodid}"> </input> </p><br><br>
+    <p> <input type="submit" value="submit"> </input> </p>
+
+</form>
+</body>
+</html>
